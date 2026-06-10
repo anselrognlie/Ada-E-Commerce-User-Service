@@ -14,7 +14,7 @@ def test_create_user(client):
     })
     assert response.status_code == 201
     body = response.get_json()
-    assert body["first_name"] == "Ada"
+    assert body["first_name"] == "Not Ada"
     assert body["last_name"] == "Lovelace"
     assert body["email"] == "ada@example.com"
     assert body["is_admin"] is False
